@@ -1,11 +1,18 @@
-import Topbar from "./components/topbar/Topbar.js";
+import Sidebar from "./components/sidebar/Sidebar";
+import Topbar from "./components/topbar/Topbar";
+import { BrowserRouter as Router } from "react-router-dom";
+import "./app.css";
 
-const App = () => {
+function App() {
   return (
-    <div className="App">
+    <Router>
       <Topbar />
-    </div>
+      <div className="container">
+        <Sidebar />
+        <div className="other">other</div>
+      </div>
+    </Router>
   );
-};
+}
 
 export default App;
